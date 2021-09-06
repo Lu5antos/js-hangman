@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman</title>
 </head>
 <body>
-    
+    <h1>Hangman</h1>
+    <p>Can you guess the hidden word?</p>
+    <div class="game-container">
+        <!-- Rod -->
+        <svg height="250" width="200" class="figure-container">
+            <line x1="60" y1="20" x2="140" y2="20"/>
+            <line x1="140" y1="20" x2="140" y2="50"/>
+            <line x1="60" y1="20" x2="60" y2="230"/>
+            <line x1="20" y1="230" x2="100" y2="230"/>
+        <!-- Head -->
+            <circle cx="140" cy="70" r="20"/>
+        </svg>
+    </div>
 </body>
 </html> 
