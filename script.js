@@ -7,7 +7,7 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['programming', 'interface', 'wizard'];
+const words = ['chapin', 'marrica','tocasucks', 'chupamela'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
