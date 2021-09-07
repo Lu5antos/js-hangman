@@ -40,10 +40,26 @@ function displayWord() {
 }
 // Update the wrong letters
 function updateWrongLettersEl() {
+    //display wrong letters
     wrongLettersEl.innerHTML = `
         ${wrongLetters.length > 0 ? '<p>Wrong</>' : ''}
         ${wrongLetters.map(letter => `<span>${letter}</span>`)}
     `;
+    //display hangman parts
+    figureParts.forEach((part,index) => {
+        const errors =wrongLetters.length;
+
+        if(index < errors) {
+            part.style.display = 'block';
+        }else {
+            part.style.display = 'none';
+        }
+    })
+    //check if lost
+    if(wrongLetters.length === figureParts.length) {
+        finalMessage.innerHTML= 'You Lost!'
+        popup.style.display = 'flex';
+    }
 }
 
 //Show notification
