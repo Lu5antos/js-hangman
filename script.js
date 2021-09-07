@@ -26,7 +26,7 @@ function displayWord() {
             .map(letter => 
                 //check if the letter is included in that array. If it is, output the letter
                 // if it isnt, return an empty string
-                `<span class=letters>
+                `<span class=letter>
                     ${correctLetters.includes(letter) ? letter : ''}
                 </span>`).join('')} 
   `;// turn it back into a string with .join()
@@ -91,7 +91,7 @@ window.addEventListener('keydown', e => {
                 wrongLetters.push(letter);
 
                 updateWrongLettersEl();
-            }else {
+            } else {
                 showNotification();
             }
         }
